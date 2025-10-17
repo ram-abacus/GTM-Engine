@@ -5,7 +5,8 @@ import Image from "next/image"
 import { ArrowRight, Target, Zap, Users, TrendingUp, CheckCircle, Mail, Brain, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { MauticFormModal } from "@/components/mautic-form-modal"
+import { HubSpotForm } from "@/components/mautic-form-modal"
+import { HubSpotFormModal } from "@/components/molde-form"
 
 export default function GTMEngineLanding() {
   const [isFormOpen, setIsFormOpen] = useState(false)
@@ -327,9 +328,10 @@ export default function GTMEngineLanding() {
 
             <Card className="p-8">
               <CardContent className="p-0">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Get My Free GTM Audit</h3>
+                <h3 className="text-2xl font-bold text-slate-900 ms-10">Get My Free GTM Audit</h3>
+                <HubSpotForm />
 
-                <div id="mauticform_wrapper_abacusgtmengine" className="mauticform_wrapper">
+                {/* <div id="mauticform_wrapper_abacusgtmengine" className="mauticform_wrapper">
                   <form
                     autoComplete="false"
                     role="form"
@@ -472,7 +474,7 @@ export default function GTMEngineLanding() {
                       defaultValue="abacusgtmengine"
                     />
                   </form>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           </div>
@@ -549,7 +551,7 @@ export default function GTMEngineLanding() {
       </footer>
 
       {/* Mautic Form Modal */}
-      <MauticFormModal isOpen={isFormOpen} onClose={closeForm} />
+      <HubSpotFormModal isOpen={isFormOpen} onClose={closeForm} />
     </div>
   )
 }
