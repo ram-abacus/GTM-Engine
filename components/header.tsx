@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -16,7 +18,7 @@ export function Header() {
           <div className="flex items-center">
             <Link href="/">
               <Image
-                src="abacusdesk-logo.svg"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/abacusdesk-logo.svg`}
                 alt="Abacus Desk Logo"
                 width={200}
                 height={64}

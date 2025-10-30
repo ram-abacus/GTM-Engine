@@ -164,7 +164,7 @@ export default function ThankYouPage() {
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
               <div className="flex items-center justify-center p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="../shopify-partner-new.jpg"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/shopify-partner-new.jpg`}
                   alt="Shopify Partner"
                   width={150}
                   height={48}
@@ -173,7 +173,7 @@ export default function ThankYouPage() {
               </div>
               <div className="flex items-center justify-center p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="../hubspot-certified.png"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/hubspot-certified.png`}
                   alt="HubSpot Certified Partner"
                   width={150}
                   height={48}
@@ -182,7 +182,7 @@ export default function ThankYouPage() {
               </div>
               <div className="flex items-center justify-center p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="../google-certified-publishing.png"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/google-certified-publishing.png`}
                   alt="Google Certified Publishing Partner"
                   width={150}
                   height={48}
@@ -191,7 +191,7 @@ export default function ThankYouPage() {
               </div>
               <div className="flex items-center justify-center p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="../google-ads-meta.png"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/google-ads-meta.png`}
                   alt="Google Ads and Meta Partner"
                   width={150}
                   height={48}

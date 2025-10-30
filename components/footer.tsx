@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="flex justify-center mb-6">
             <Link href="/">
               <Image
-                src="abacusdesk-logo.svg"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/abacusdesk-logo.svg`}
                 alt="Abacus Desk Logo"
                 width={200}
                 height={80}

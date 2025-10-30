@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
 
     <head>
-      <link rel="icon" type="image/svg" href="abacusdesk-logo.svg" />
+      <link rel="icon" type="image/svg" href={`${process.env.NEXT_PUBLIC_BASE_PATH}/abacusdesk-logo.svg`} />
       
         {/* Google Tag (gtag.js) */}
         <Script
