@@ -4,41 +4,14 @@ import Image from "next/image"
 import { ArrowRight, CheckCircle, Calendar, Mail, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Header } from "@/components/header"
+import Footer from "@/components/footer"
 
 export default function ThankYouPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Navigation */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center">
-              <Image
-                src="../images/abacusdesk-logo.svg"
-                alt="Abacus Desk Logo"
-                width={200}
-                height={64}
-                className="h-16 w-auto"
-                priority
-              />
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center">
-              <Button onClick={() => (window.location.href = "/")} className="bg-blue-600 hover:bg-blue-700 text-white">
-                Back to Home
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
-              <Button onClick={() => (window.location.href = "/")} className="bg-blue-600 hover:bg-blue-700 text-white">
-                Home
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header/>
 
       {/* Thank You Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
@@ -119,7 +92,7 @@ export default function ThankYouPage() {
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => (window.location.href = "mailto:hello@abacusdesk.com")}
+                onClick={() => (window.location.href = "mailto:support@abacusdesk.co.in")}
                 className="border-slate-600 text-slate-300 hover:bg-slate-800 px-8 py-4 text-lg bg-transparent"
               >
                 Contact Us Directly
@@ -191,7 +164,7 @@ export default function ThankYouPage() {
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
               <div className="flex items-center justify-center p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="../images/shopify-partner-new.jpg"
+                  src="../shopify-partner-new.jpg"
                   alt="Shopify Partner"
                   width={150}
                   height={48}
@@ -200,7 +173,7 @@ export default function ThankYouPage() {
               </div>
               <div className="flex items-center justify-center p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="../images/hubspot-certified.png"
+                  src="../hubspot-certified.png"
                   alt="HubSpot Certified Partner"
                   width={150}
                   height={48}
@@ -209,7 +182,7 @@ export default function ThankYouPage() {
               </div>
               <div className="flex items-center justify-center p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="../images/google-certified-publishing.png"
+                  src="../google-certified-publishing.png"
                   alt="Google Certified Publishing Partner"
                   width={150}
                   height={48}
@@ -218,7 +191,7 @@ export default function ThankYouPage() {
               </div>
               <div className="flex items-center justify-center p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="../images/google-ads-meta.png"
+                  src="../google-ads-meta.png"
                   alt="Google Ads and Meta Partner"
                   width={150}
                   height={48}
@@ -231,36 +204,8 @@ export default function ThankYouPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <Image
-                src="../images/abacusdesk-logo.svg"
-                alt="Abacus Desk Logo"
-                width={200}
-                height={80}
-                className="h-20 w-auto opacity-80"
-              />
-            </div>
-            <p className="text-slate-400 mb-6">Your Launch Partner for Smart Growth</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => (window.location.href = "/")} className="bg-blue-600 hover:bg-blue-700 text-white">
-                Back to Homepage
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => (window.location.href = "mailto:hello@abacusdesk.com")}
-                className="border-slate-600 text-slate-300 hover:bg-slate-800 bg-transparent"
-              >
-                Email Us
-                <Mail className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
+      
     </div>
   )
 }

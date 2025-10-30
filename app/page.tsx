@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { HubSpotForm } from "@/components/mautic-form-modal"
 import { HubSpotFormModal } from "@/components/molde-form"
+import { Header } from "@/components/header"
+import Footer from "@/components/footer"
 
 export default function GTMEngineLanding() {
   const [isFormOpen, setIsFormOpen] = useState(false)
@@ -17,36 +19,7 @@ export default function GTMEngineLanding() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Navigation */}
-      <header className="absolute top-0 left-0 right-0 z-40 bg-transparent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center">
-              <Image
-                src="images/abacusdesk-logo.svg"
-                alt="Abacus Desk Logo"
-                width={200}
-                height={64}
-                className="h-16 w-auto"
-                priority
-              />
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center">
-              <Button onClick={openForm} className="bg-blue-600 hover:bg-blue-700 text-white">
-                Get Started
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
-              <Button onClick={openForm} className="bg-blue-600 hover:bg-blue-700 text-white">
-                Get Started
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header/>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
@@ -105,7 +78,7 @@ export default function GTMEngineLanding() {
   </video>
 
                 {/* <Image
-                  src="images/gtm-hero-new.png"
+                  src="gtm-hero-new.png"
                   alt="GTM Engine - AI-powered marketing dashboard"
                   width={600}
                   height={400}
@@ -489,7 +462,7 @@ export default function GTMEngineLanding() {
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
               <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="images/shopify-partner-new.jpg"
+                  src="shopify-partner-new.jpg"
                   alt="Shopify Partner"
                   width={150}
                   height={48}
@@ -498,7 +471,7 @@ export default function GTMEngineLanding() {
               </div>
               <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="images/hubspot-certified.png"
+                  src="hubspot-certified.png"
                   alt="HubSpot Certified Partner"
                   width={150}
                   height={48}
@@ -507,7 +480,7 @@ export default function GTMEngineLanding() {
               </div>
               <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="images/google-certified-publishing.png"
+                  src="google-certified-publishing.png"
                   alt="Google Certified Publishing Partner"
                   width={150}
                   height={48}
@@ -516,7 +489,7 @@ export default function GTMEngineLanding() {
               </div>
               <div className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                 <Image
-                  src="images/google-ads-meta.png"
+                  src="google-ads-meta.png"
                   alt="Google Ads and Meta Partner"
                   width={150}
                   height={48}
@@ -529,26 +502,7 @@ export default function GTMEngineLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <Image
-                src="images/abacusdesk-logo.svg"
-                alt="Abacus Desk Logo"
-                width={200}
-                height={80}
-                className="h-20 w-auto opacity-80"
-              />
-            </div>
-            <p className="text-slate-400 mb-6">Your Launch Partner for Smart Growth</p>
-            <Button onClick={openForm} className="bg-blue-600 hover:bg-blue-700 text-white">
-              Start Your GTM Journey Today
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Mautic Form Modal */}
       <HubSpotFormModal isOpen={isFormOpen} onClose={closeForm} />

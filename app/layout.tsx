@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import Script from "next/script";
 import { Inter } from "next/font/google"
 import "./globals.css"
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
+import CookieConsent from "@/components/CookiesConsent";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -41,6 +43,9 @@ export default function RootLayout({
 
       <body className={inter.className} suppressHydrationWarning>
         {children}
+        <CookieConsent />
+        <GoogleTagManager gtmId="GTM-MM5PWB94" />
+        <GoogleAnalytics gaId="G-M6HMK9JLLG" />
       </body>
     </html>
   )
